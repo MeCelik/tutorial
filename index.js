@@ -1,41 +1,20 @@
-const indexBulan = (dizin, deger) => {
-  console.log("dizin ====>", dizin); // [5,10,15,20]
-  console.log("deger ====>", deger); // 20
-  let bulunanIndex = false;
-  // lenght => 4
-  for (let i = 0; i < dizin.length; i++) {
-    // i => 3
-    const element = dizin[i];
-    // element => 20
-    //  deger => 20
-    if (element === deger) {
-      bulunanIndex = i;
-      // bulunanIndex => 0
-      break;
-    }
+const getNegSayi = (dizin) => {
+  if (dizin[i] < 0) {
+    return dizin[i];
   }
-  return bulunanIndex;
 };
-//
-//
-
-const sayiTekYazdir = (dizin) => {
-  let tekSeferlikDizin = [];
+let negSayiDizini = [];
+const myFunction = (dizin) => {
   for (let i = 0; i < dizin.length; i++) {
     const element = dizin[i];
-    // i === 7 => element => 20 tekSeferlikDizin=> [5, 10, 15,20]
-    // indexBulan([5, 10, 15, 20], 20) => 3
-    // indexBulan(tekSeferlikDizin, element) == false => false
-    if (indexBulan(tekSeferlikDizin, element) == false) {
-      tekSeferlikDizin.push(element);
-      // tekSeferlikDizin => [5, 10, 15, 20]
+    if (element < 0) {
+      negSayiDizini.push(element);
     }
   }
-  console.log(tekSeferlikDizin);
+  console.log(negSayiDizini);
 };
-
 const main = () => {
-  let sayiDizini = [5, 10, 15, 10, 10, 5, 20, 20];
-  sayiTekYazdir(sayiDizini);
+  let sayilar = [0, 10, -75, 17, 9, -62];
+  myFunction(sayilar);
 };
 main();
