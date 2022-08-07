@@ -36,25 +36,17 @@ const musteriler = [
   },
 ];
 
-const ourMap = (dizin) => {
-  const emailListesi = [];
-  for (let i = 0; i < dizin.length; i++) {
-    const element = dizin[i];
-    emailListesi.push(element.email);
-  }
-  return emailListesi;
-};
-
 const main = () => {
+  // console.log(musteriler);
   const kadinMusteriler = musteriler.filter((item) => {
     if (item.cinsiyet === "K") {
       return true;
     }
   });
-  const emailList = ourMap(kadinMusteriler);
-  // const emailList = kadinMusteriler.map((item) => {
-  //   return item.email;
-  // });
+  const emailList = kadinMusteriler.map((item) => {
+    return item.email;
+  });
+  console.log(kadinMusteriler);
   console.log(emailList);
 };
 main();
