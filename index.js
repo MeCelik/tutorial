@@ -1,31 +1,15 @@
-const hesapla = (n) => {
-  let sonuc = 0;
-  for (let i = 1; i <= n; i++) {
-    sonuc = sonuc + (i + 1) / i;
-  }
-  return sonuc;
-};
-
-const islem1 = (sayi) => {
+const islem = (kucuk, buyuk) => {
   let bosDizin = [];
-  if (sayi > 0) {
-    sayi = sayi - 1;
-
-    bosDizin.push(sayi);
-    islem1(sayi);
+  for (let i = kucuk; i <= buyuk; i++) {
+    if (i % 2 === 0) {
+      bosDizin.push(i);
+    }
+    return bosDizin;
   }
-  let toplama = (item) => {
-    let sum;
-    sum += item;
-    return sum;
-  };
-  bosDizin.forEach(toplama);
-  console.log(bosDizin);
 };
 
 const main = () => {
-  islem1(16);
-  const sonuc = hesapla(16);
-  console.log(sonuc);
+  let sayilar = [5, 20];
+  console.log(islem(sayilar));
 };
 main();

@@ -3,19 +3,20 @@ let tekSayilar = [];
 const getTekSayilar = sayiDizini.filter((item) => {
   if (item % 2 === 1) {
     tekSayilar.push(item);
-    console.log(tekSayilar);
   }
 });
 let count = 0;
-for (let i = tekSayilar.length - 1; i > -1; i--) {
+for (let i = tekSayilar.length - 1; i > -1; i = i - 1) {
   count += tekSayilar[i];
-  let bolmeSayisi = count;
 }
-let cevap =
+const cevap =
   "Girilen" +
+  " " +
   tekSayilar.length +
+  " " +
   "sayinin aritmetik ortalamasi" +
-  bolmeSayisi / tekSayilar.length;
+  " " +
+  count / tekSayilar.length;
 console.log(cevap);
 
 const main = () => {};

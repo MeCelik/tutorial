@@ -5,6 +5,7 @@ const hexaDecimal = (dizin) => {
     let stringedNumber = element.toString(16);
     base16Array.push(stringedNumber);
   }
+  return base16Array;
 };
 const octal = (dizin) => {
   let base8Array = [];
@@ -13,6 +14,7 @@ const octal = (dizin) => {
     let stringedNumber = element.toString(8);
     base8Array.push(stringedNumber);
   }
+  return base8Array;
 };
 const main = () => {
   let sayiDizini = [1, 5, 10, 12, 17, 25];
