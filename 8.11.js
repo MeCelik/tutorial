@@ -4,6 +4,7 @@ const hesapla = (dizin) => {
 
   for (let i = 0; i < dizin.length; i++) {
     const element = dizin[i];
+    console.log("Satir 7", element);
     if (element > 99) {
       break;
     }
