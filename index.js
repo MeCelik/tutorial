@@ -1,4 +1,8 @@
-const push = (origin, node) => {
+const push = (origin, nodeData) => {
+  const node = {
+    data: nodeData,
+    next: null,
+  };
   let pointer = origin;
   while (pointer.next !== null) {
     pointer = pointer.next;
@@ -12,19 +16,13 @@ const main = () => {
     data: 10,
     next: null,
   };
-  let birinci = {
-    data: 20,
-    next: null,
-  };
-  let ikinci = {
-    data: 30,
-    next: null,
-  };
   //
-  const result = push(base, birinci);
-  const result1 = push(base, ikinci);
-  console.log(result);
-  console.log(result1);
+  const datalar = [20, 50, 30, 50, 25];
+  for (let i = 0; i < datalar.length; i++) {
+    const element = datalar[i];
+    push(base, element);
+  }
+  console.log(JSON.stringify(base));
   //
 };
 
